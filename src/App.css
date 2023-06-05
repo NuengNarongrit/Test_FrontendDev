@@ -1,38 +1,242 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-image: linear-gradient(to right, #6eda78, #ffa200 );
   min-height: 100vh;
+  padding: 0 1% 0 1%; 
+}
+
+.container-buttom{
+  display: flex;
+  justify-content: end;
+  gap: 20px;
+}
+
+.button{
+  background-color: #fff;
+  display: flex;
+  align-self: center;
+  padding: 10px;
+  margin-bottom: 1%;
+}
+
+.button:hover{
+  background-color: #ffa200;
+}
+
+header.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+}
+.custom-select{
+  width: 60px;
+}
+
+/* buttom ทดสอบปุ่ม ---------------------------------------------------------------------------------------------*/
+.one-container{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.one-button {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 200px;
+  border-radius: 15px;
+  position: relative; 
+  border: none;
+}
+
+.one-button:hover {
+  background:#ffa200; 
+}
+
+
+.one-triangle {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%) rotate(270deg); 
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 120px solid #696969;
+}
+
+.two-button {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  height: 200px;
+  border-radius: 15px;
+  position: relative;
+  border: none;
+}
+
+.two-button:hover {
+  background:#ffa200; 
+}
+
+.two-triangle {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%) rotate(180deg);
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 120px solid #696969;
+}
+
+.three-triangle {
+  position: absolute;
+  top: 50%;
+  left: 30%; 
+  transform: translate(-50%, -50%) rotate(360deg);
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 120px solid #696969;
+}
+
+.four-triangle {
+  position: absolute; 
+  top: 50%; 
+  left: 55%; 
+  transform: translate(-50%, -50%) rotate(90deg); 
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 120px solid #696969;
+}
+
+.label {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #6eda78;
+  color: #fff;
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 25px;
+  width: 50%;
+}
+
+hr{
+  width: 80%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.two-container {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
   display: flex;
   flex-direction: column;
+  gap:10px;
   align-items: center;
+  width: 100%;
+}
+
+.grid-swapped {
+  flex-direction: row-reverse;
+}
+
+.box-1{
+  display: flex;
+  margin-left: 10%;
+  gap: 10px;
+}
+
+.box-2{
+  display: flex;
+  gap: 10px;
+}
+
+.one-box,.two-box,.three-box,
+.four-box,.five-box,.six-box  {
+  background-color: #fff;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 360px;
+  height: 200px;
+  border-radius: 15px;
+  position: relative;
+  border: none;
 }
 
-.App-link {
-  color: #61dafb;
+.square {
+  width: 150px;
+  height: 150px;
+  background-color: #696969;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #696969;
 }
+
+.ellipse {
+  width: 300px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: #696969;
+}
+
+.trapezoid {
+  border-bottom: 100px solid #696969;
+  border-left: 80px solid transparent;
+  border-right: 90px solid transparent;
+  height: 0;
+  width: 120px;
+}
+
+.rectangle {
+  width: 300px;
+  height: 150px;
+  background-color: #696969;
+}
+
+.parallelogram {
+  width: 250px;
+  height: 150px;
+  background-color: #696969;
+  transform: skew(20deg);
+  order: -1;
+}
+
+.one-box:hover,.two-box:hover,.three-box:hover,
+.four-box:hover,.five-box:hover,.six-box:hover{
+  background: #ffa200;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

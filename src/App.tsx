@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
-function App() {
+import { Button, PersonForm } from './components';
+import Head from './components/Head';
+import './App.css';
+const App: React.FC = () => {
+
+  //ตัวแปลภาษา
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Head />
+        <div className="container-buttom">
+          <div className="button">
+            <Link to="/" style={{ textDecoration: 'none' }}>{t('home')}</Link>
+          </div>
+          <div className="button">
+            <Link to="/button" style={{ textDecoration: 'none' }}>{t('test_1')}</Link>
+          </div>
+          <div className="button">
+            <Link to="/personForm" style={{ textDecoration: 'none' }}>{t('test_2')}</Link>
+          </div>
+        </div>
+        <Routes>
+          <Route path="/button" element={<Button />} />
+          <Route path="/personForm" element={<PersonForm />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
